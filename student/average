@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+
+	int student[11] = { 1,2,3,4,5,6,7,8,9,10 };
+	int kor[11] = { 10,10,10,10,10,10,10,10,10,10 };
+	int eng[11]{ 20,20,20,20,20,20,20,20,20,20 };
+	int mat[11] = { 30,30,30,30,30,30,30,30,30,30 };
+	int avg;
+
+
+
+
+	for (int i = 0; i < 10; i++) {
+		avg = (kor[i] + eng[i] + mat[i]) / 3;
+
+			cout << "학번:" << student[i] << endl << "국어:" << kor[i] << endl << "영어:" << eng[i] << endl << "수학:" << mat[i] << endl << "평균:" << avg << endl;
+
+	}
+}
