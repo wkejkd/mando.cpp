@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+const int NUM_STUDENTS = 10;
+const int NUM_SUBJECTS = 3;
+
+int main() {
+    int scores[NUM_STUDENTS][NUM_SUBJECTS];
+    
+    // 학생들의 점수 입력 받기
+    for (int i = 0; i < NUM_STUDENTS; ++i) {
+        cout << "학생 " << i + 1 << "의 국어, 수학, 영어 점수를 입력하세요: ";
+        for (int j = 0; j < NUM_SUBJECTS; ++j) {
+            cin >> scores[i][j];
+        }
+    }
+    
+    // 각 학생의 평균 계산 및 출력
+    cout << "\n각 학생의 평균 점수:\n";
+    for (int i = 0; i < NUM_STUDENTS; ++i) {
+        double total = 0.0;
+        for (int j = 0; j < NUM_SUBJECTS; ++j) {
+            total += scores[i][j];
+        }
+        double average = total / NUM_SUBJECTS;
+        cout << "학생 " << i + 1 << "의 평균 점수: " << average << endl;
+    }
+    
+    return 0;
+}
